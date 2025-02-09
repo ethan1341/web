@@ -32,7 +32,8 @@ const theme = extendTheme({
             seashell: "#F1F1EE", // Creamy warm white
         },
         grey: {
-            charcoal: '#4c4c4c'
+            charcoal: '#4c4c4c',
+            slight: '#E6E6E4'
         },
             background: {
                 100: "#1c3247",

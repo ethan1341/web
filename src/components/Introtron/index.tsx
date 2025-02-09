@@ -1,8 +1,8 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export const Introtron = () => {
-    const text = "I am probably grinding Leetcode, please send help :(";
+    const text = "I am probably grinding Leetcode, please distract me d(^.^)z ";
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
 
@@ -11,73 +11,91 @@ export const Introtron = () => {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + text[index]);
                 setIndex((prev) => prev + 1);
-            }, 75); // Typing speed (100ms per character)
+            }, 75); // Typing speed
 
             return () => clearTimeout(timeout);
         }
     }, [index, text]);
 
     return (
-        <Box w="100vw" h="calc(100vh - 105px)" bg="whites.alabaster" px={6} py={10}>
-            <Flex
-                h="60%"
-                maxW="1200px"
-                mx="auto"
-                align="center"
-                justify="space-between"
-                direction={{ base: "column", md: "row" }} // Column for mobile, row for desktop
+        <>
+            {/* Hero Section */}
+            <Box
+                w="100vw"
+                minH="100vh"
+                bg="whites.alabaster"
+                px={{ base: 4, md: 6 }}
+                py={{ base: 8, md: 10 }}
+                pb="12" // Prevent overlap
             >
-                {/* Left Side - Text */}
-                <Box flex="1" textAlign={{ base: "center", md: "left" }}>
-                    <Text fontSize="7xl" pr="5" fontFamily="Caveat" display="inline">
-                        Hello There!
+                <Flex
+                    maxW="1200px"
+                    mx="auto"
+                    align="center"
+                    justify="center"
+                    mt={{base:2, md:8}}
+                    mb={{base:0, md:40}}
+                    direction={{ base: "column-reverse", md: "row" }} // Stack on mobile, row on desktop
+                    gap={{ base: 8, md: 18 }} // Adds spacing between elements
+                    textAlign={{ base: "center", md: "left" }} // Center text on mobile
+                >
+                    {/* Left Side - Text */}
+                    <Box flex="1">
+                        <Text fontSize={{ base: "5xl", md: "7xl" }} fontFamily="Caveat">
+                            Hello There!
+                        </Text>
+                        <Box>
+                            <Text fontSize={{ base: "3xl", md: "3xl" }} display="inline">
+                                My Name is{" "}
+                            </Text>
+                            <Text fontSize={{ base: "3xl", md: "3xl" }} display="inline" color="accent.200">
+                                Ethan
+                            </Text>
+                        </Box>
+                        <Text fontSize={{ base: "3xl", md: "3xl" }} fontWeight="bold">
+                            I am{" "}
+                            <Text fontSize={{ base: "3xl", md: "3xl" }} style={{ color: "var(--chakra-colors-highlight-200)" }} display="inline">
+                                Frontend Developer
+                            </Text>
+                        </Text>
+                        <Text fontSize={{ base: "md", md: "xl" }} opacity="0.8">
+                            {displayedText}
+                        </Text>
+                    </Box>
+
+                    {/* Right Side - Image */}
+                    <Box flex="1" display="flex" justifyContent="center">
+                        <Image
+                            src="/headshot.png"
+                            alt="Hero Avatar"
+                            borderRadius="full"
+                            boxSize={{ base: "200px", md: "300px" }} // Smaller on mobile
+                            objectFit="cover"
+                            shadow="lg"
+                            bg="highlight.200"
+                            maxH="300px"
+                        />
+                    </Box>
+                </Flex>
+
+                {/* Below Content - "The Story" */}
+                <Box mt={{ base: 12, md: 40 }} textAlign={{ base: "center", md: "left" }} maxW="1200px" mx="auto">
+                    <Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Caveat" color="grey.charcoal" mb={4}>
+                        The Story:
                     </Text>
-                    <br />
-                    <Text fontSize="5xl" display="inline">My Name is </Text>
-                    <Text fontSize="5xl" display="inline" color="accent.200" whiteSpace="nowrap">
-                        Ethan
+                    <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
+                        I have been working professionally as a developer for 10 years—time really flies! My journey began
+                        with Backbone.js, transitioned to Angular, and now I specialize in React. I am deeply passionate
+                        about optimization, whether it's enhancing performance through building CDNs or improving tooling for
+                        developers.
                     </Text>
-                    <br />
-                    <Text fontSize="5xl" display="inline">
-                        I am{" "}
-                        <span style={{ color: "var(--chakra-colors-highlight-200)", fontWeight: "bold" }}>
-                            Frontend Developer
-                        </span>
-                    </Text>
-                    <br />
-                    <Text fontSize="xl" pl="1" opacity="0.8" textAlign="start">
-                        {displayedText}
+                    <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
+                        If you'd like to learn more, feel free to check out my resume!
                     </Text>
                 </Box>
-
-                {/* Right Side - Image */}
-                <Box flex="1" display="flex" justifyContent="center">
-                    <Image
-                        src="/headshot.png" // Replace with your image path
-                        alt="Hero Avatar"
-                        borderRadius="full"
-                        boxSize="300px" // Adjust size as needed
-                        objectFit="cover"
-                        shadow="lg"
-                        bg="highlight.200"
-                        maxH="300px" // Prevents the image from being too tall
-                        aspectRatio={1 / 1} // Ensures the image is always square
-                    />
-                </Box>
-            </Flex>
-
-            {/* Below Content - "The Story" */}
-            <Box mt={6} textAlign="left" maxW="1200px" mx="auto">
-                <Text fontSize="5xl" fontFamily="Caveat" color="grey.charcoal" mb={4}>
-                    The Story:
-                </Text>
-                <Text fontSize="xl" color="grey.charcoal" lineHeight="1.8">
-                    I have been working professionally as a developer for 10 years—time really flies! My journey began with Backbone.js, transitioned to Angular, and now I specialize in React. I am deeply passionate about optimization, whether it's enhancing performance through building CDNs or improving tooling for developers.
-                </Text><br/>
-                <Text fontSize="xl" color="grey.charcoal" lineHeight="1.8">
-                    If you'd like to learn more, feel free to check out my resume!
-                </Text>
             </Box>
-        </Box>
+
+
+        </>
     );
 };

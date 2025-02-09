@@ -1,8 +1,55 @@
 {
-  "hash": "80694996",
+  "hash": "fbf1c8c1",
   "configHash": "af38459b",
-  "lockfileHash": "b2740b30",
-  "browserHash": "9535a13e",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "03531d23",
+  "browserHash": "18d6f513",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "e1f2f1dc",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "6a65d9c1",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4b7e9fda",
+      "needsInterop": true
+    },
+    "@chakra-ui/react": {
+      "src": "../../node_modules/@chakra-ui/react/dist/esm/index.mjs",
+      "file": "@chakra-ui_react.js",
+      "fileHash": "fd1df6d4",
+      "needsInterop": false
+    },
+    "@chakra-ui/icons": {
+      "src": "../../node_modules/@chakra-ui/icons/dist/esm/index.mjs",
+      "file": "@chakra-ui_icons.js",
+      "fileHash": "415e7c2f",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "100f4112",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-IOVIDM2D": {
+      "file": "chunk-IOVIDM2D.js"
+    },
+    "chunk-V25QW3ZC": {
+      "file": "chunk-V25QW3ZC.js"
+    },
+    "chunk-BDDZIO7C": {
+      "file": "chunk-BDDZIO7C.js"
+    }
+  }
 }

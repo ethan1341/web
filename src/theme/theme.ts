@@ -1,4 +1,12 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/quicksand"; // Default weight (400)
+import "@fontsource/quicksand/600.css"; // Semi-bold (600)
+import "@fontsource/quicksand/700.css"; // Bold (700)
+
+import "@fontsource/lora"; // Default weight (400)
+import "@fontsource/lora/600.css"; // Semi-bold (600)
+import "@fontsource/lora/700.css"; // Bold (700)
 
 const config: ThemeConfig = {
     initialColorMode: "light",
@@ -7,9 +15,22 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
     config,
+    fonts: {
+        heading: "'Quicksand', sans-serif",  // Elegant serif for headings
+        body: "'Quicksand', sans-serif", // Modern, rounded sans-serif for body text
+    },
     colors: {
-
-            primary: {
+        whites: {
+            alabaster: "#FAFAF8", // Soft warm white
+            snow: "#FBFBF9", // Bright but not harsh
+            ivory: "#F8F8F5", // Gentle warm white
+            ghostWhite: "#F8F8FF", // Cool soft white with a hint of blue
+            seashell: "#F1F1EE", // Creamy warm white
+        },
+        grey: {
+            charcoal: '#4c4c4c'
+        },
+            background: {
                 100: "#1c3247",
                 200: "#182c3f",
                 300: "#142637",
@@ -53,7 +74,7 @@ const theme = extendTheme({
                 800: "#546983",
                 900: "#485d77",
             },
-            background: {
+            text: {
                 100: "#f0f1ef",
                 200: "#ecedeb",
                 300: "#e8e9e5",

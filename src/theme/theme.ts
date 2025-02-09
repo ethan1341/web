@@ -8,6 +8,10 @@ import "@fontsource/lora"; // Default weight (400)
 import "@fontsource/lora/600.css"; // Semi-bold (600)
 import "@fontsource/lora/700.css"; // Bold (700)
 
+import "@fontsource/caveat"; // Default weight (400)
+import "@fontsource/caveat/600.css"; // Semi-bold (600)
+import "@fontsource/caveat/700.css"; // Bold (700)
+
 const config: ThemeConfig = {
     initialColorMode: "light",
     useSystemColorMode: false,
@@ -89,12 +93,15 @@ const theme = extendTheme({
     },
     styles: {
         global: {
+            ".caveat-font": {
+                fontFamily: "'Caveat', cursive", // Define the custom class
+            },
+        },
             body: {
                 bg: "background",
                 color: "primary",
             },
         },
-    },
     components: {
         Button: {
             baseStyle: {

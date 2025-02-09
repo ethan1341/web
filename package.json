@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^2.10.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/caveat": "^5.1.1",
     "@fontsource/lora": "^5.1.1",
     "@fontsource/playfair-display": "^5.1.1",
     "@fontsource/poppins": "^5.1.1",

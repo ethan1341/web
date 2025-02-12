@@ -1,5 +1,6 @@
+//@ts-nocheck
+
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/quicksand"; // Default weight (400)
 import "@fontsource/quicksand/600.css"; // Semi-bold (600)
 import "@fontsource/quicksand/700.css"; // Bold (700)

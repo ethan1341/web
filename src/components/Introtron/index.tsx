@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, Image} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export const Introtron = () => {

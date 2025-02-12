@@ -11,7 +11,7 @@ import {
     useBreakpointValue,
     useDisclosure,
 } from '@chakra-ui/react'
-import { FaGithub, FaYoutube, FaLinkedin, FaReact } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaLinkedin} from "react-icons/fa";
 import {
     ChevronDownIcon,
     EmailIcon

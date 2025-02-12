@@ -38,7 +38,7 @@ const Resume = () => {
 
             {/* Experience Section */}
             <VStack align="start" spacing={4} position="relative" _before={{ content: '""', position: "absolute", top: 0, left: "16px", width: "2px", height: "100%", bg: "gray.300" }}>
-                <Heading size="md">Experience</Heading>
+                <Heading size="md" ml={50}>Experience</Heading>
 
                 {[
                     {

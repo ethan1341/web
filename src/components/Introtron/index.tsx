@@ -66,8 +66,8 @@ export const Introtron = () => {
                     {/* Right Side - Image */}
                     <Box flex="1" display="flex" justifyContent="center">
                         <Image
-                            src="/headshot.png"
-                            alt="Hero Avatar"
+                            src="/avatar1.png"
+                            alt="Hero Avatar1"
                             borderRadius="full"
                             boxSize={{ base: "200px", md: "300px" }} // Smaller on mobile
                             objectFit="cover"

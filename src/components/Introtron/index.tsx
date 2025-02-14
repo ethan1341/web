@@ -84,14 +84,9 @@ export const Introtron = () => {
                         The Story:
                     </Text>
                     <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
-                        I have been working professionally as a developer for 10 years—time really flies! My journey began
-                        with Backbone.js, transitioned to Angular, and now I specialize in React. I am deeply passionate
-                        about optimization, whether it's enhancing performance through building CDNs or improving tooling for
-                        developers.
+                        I'm a Frontend Developer specializing in React and modern tooling, with experience building high-performance UIs and working with large datasets. At Boeing, I optimized data management and visualization for complex datasets. At Comcast, I develop fast, efficient UIs for Xumo TV, ensuring a seamless experience for millions of users.  Outside of work, I enjoy golfing and staying active.
                     </Text>
-                    <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
-                        If you'd like to learn more, feel free to check out my resume!
-                    </Text>
+
                 </Box>
             </Box>
 

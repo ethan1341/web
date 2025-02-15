@@ -9,7 +9,7 @@ import {
     Icon,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure,
+    useDisclosure, Link,
 } from '@chakra-ui/react'
 import { FaGithub, FaYoutube, FaLinkedin} from "react-icons/fa";
 import {
@@ -51,10 +51,17 @@ export const Navbar = ()=> {
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
-                    <Icon as={FaGithub} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />;
-                    <Icon as={FaYoutube} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />;
-                    <Icon as={FaLinkedin} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }}/>;
-                    <EmailIcon cursor="pointer" _hover={{ color: "highlight.100" }} boxSize={7} />
+                    <Link href="https://github.com/ethan1341" isExternal>
+                        <Icon as={FaGithub} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />
+                    </Link>
+                    <Link href="https://www.youtube.com/@undefinedisnotafunction">
+                    <Icon as={FaYoutube} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/ethan-pidcock-bb9743a0/">
+                    <Icon as={FaLinkedin} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }}/>
+                    </Link>
+                    <Link href="mailto:ethan.pidcock@gmail.com" className="text-blue-500 hover:underline"><EmailIcon
+                        cursor="pointer" _hover={{color: "highlight.100"}} boxSize={7}/></Link>
                 </Stack>
             </Flex>
 

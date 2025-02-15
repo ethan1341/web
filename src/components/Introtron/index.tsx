@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image} from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export const Introtron = () => {
@@ -18,29 +18,36 @@ export const Introtron = () => {
     }, [index, text]);
 
     return (
-        <>
-            {/* Hero Section */}
-            <Box
-                w="100vw"
-                minH="100vh"
-                bg="whites.alabaster"
-                px={{ base: 4, md: 6 }}
-                py={{ base: 8, md: 10 }}
-                pb="12" // Prevent overlap
+        <Box
+            w="100vw"
+            minH="100vh"
+            bg="whites.alabaster"
+            px={{ base: 4, md: 6 }}
+            py={{ base: 8, md: 10 }}
+            display="flex"
+            flexDirection="column"
+        >
+            {/* Main Flex Wrapper (Ensures Story Stays at Bottom) */}
+            <Flex
+                flex="1"
+                direction="column"
+                justify="center"
+                align="center"
+                maxW="1200px"
+                mx="auto"
+                w="100%"
             >
+                {/* Hero Section - Text + Image */}
                 <Flex
-                    maxW="1200px"
-                    mx="auto"
                     align="center"
-                    justify="center"
-                    mt={{base:2, md:8}}
-                    mb={{base:0, md:40}}
-                    direction={{ base: "column-reverse", md: "row" }} // Stack on mobile, row on desktop
-                    gap={{ base: 8, md: 18 }} // Adds spacing between elements
-                    textAlign={{ base: "center", md: "left" }} // Center text on mobile
+                    justify="space-between" // Adds spacing between text & image
+                    direction={{ base: "column-reverse", md: "row" }}
+                    gap={{ base: 12, md: 24 }} // Controls spacing
+                    textAlign={{ base: "center", md: "left" }}
+                    w="100%"
                 >
                     {/* Left Side - Text */}
-                    <Box flex="1">
+                    <Box flex="1" mr={{ md: 8 }}> {/* Added margin for extra spacing */}
                         <Text fontSize={{ base: "5xl", md: "7xl" }} fontFamily="Caveat">
                             Hello There!
                         </Text>
@@ -69,7 +76,7 @@ export const Introtron = () => {
                             src="./avatar1.png"
                             alt="Hero Avatar1"
                             borderRadius="full"
-                            boxSize={{ base: "200px", md: "300px" }} // Smaller on mobile
+                            boxSize={{ base: "200px", md: "300px" }}
                             objectFit="cover"
                             shadow="lg"
                             bg="highlight.200"
@@ -77,20 +84,23 @@ export const Introtron = () => {
                         />
                     </Box>
                 </Flex>
+            </Flex>
 
-                {/* Below Content - "The Story" */}
-                <Box mt={{ base: 12, md: 40 }} textAlign={{ base: "center", md: "left" }} maxW="1200px" mx="auto">
-                    <Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Caveat" color="grey.charcoal" mb={4}>
-                        The Story:
-                    </Text>
-                    <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
-                        I'm a Frontend Developer specializing in React and modern tooling, with experience building high-performance UIs and working with large datasets. At Boeing, I optimized data management and visualization for complex datasets. At Comcast, I develop fast, efficient UIs for Xumo TV, ensuring a seamless experience for millions of users.  Outside of work, I enjoy golfing and staying active.
-                    </Text>
-
-                </Box>
+            {/* "The Story" Section - Floated to Bottom */}
+            <Box
+                maxW="1200px"
+                mx="auto"
+                textAlign={{ base: "center", md: "left" }}
+                mt="auto" // Push to bottom
+                pb="10"
+            >
+                <Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Caveat" color="grey.charcoal" mb={4}>
+                    The Story:
+                </Text>
+                <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
+                    I'm a Frontend Developer specializing in React and modern tooling, with experience building high-performance UIs and working with large datasets. At Boeing, I optimized data management and visualization for complex datasets. At Comcast, I develop fast, efficient UIs for Xumo TV, ensuring a seamless experience for millions of users. Outside of work, I enjoy golfing and staying active.
+                </Text>
             </Box>
-
-
-        </>
+        </Box>
     );
 };

@@ -93,6 +93,7 @@ export const Introtron = () => {
                 textAlign={{ base: "center", md: "left" }}
                 mt="auto" // Push to bottom
                 pb="10"
+                mb="10"
             >
                 <Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Caveat" color="grey.charcoal" mb={4}>
                     The Story:

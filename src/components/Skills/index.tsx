@@ -8,14 +8,7 @@ import { SkillsIcon } from "../Icon";
 
 export const Skills = () => {
     return (
-        <Box 
-            data-testid="skills-container"
-            w="100vw" 
-            minH="40vh" 
-            bg="gray.100" 
-            px={6} 
-            py={10}
-        >
+        <Box w="100vw" minH="40vh" bg="gray.100" px={6} py={10}>
             <Flex
                 maxW="1200px"
                 mx="auto"

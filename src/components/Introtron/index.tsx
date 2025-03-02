@@ -19,7 +19,6 @@ export const Introtron = () => {
 
     return (
         <Box
-            data-testid="introtron-main"
             w="100vw"
             minH="100vh"
             bg="whites.alabaster"
@@ -60,9 +59,9 @@ export const Introtron = () => {
                                 Ethan
                             </Text>
                         </Box>
-                        <Text fontSize={{ base: "3xl", md: "3xl" }} fontWeight="bold" as="div">
+                        <Text fontSize={{ base: "3xl", md: "3xl" }} fontWeight="bold">
                             I am{" "}
-                            <Text fontSize={{ base: "3xl", md: "3xl" }} style={{ color: "var(--chakra-colors-highlight-200)" }} display="inline" as="span">
+                            <Text fontSize={{ base: "3xl", md: "3xl" }} style={{ color: "var(--chakra-colors-highlight-200)" }} display="inline">
                                 Frontend Developer
                             </Text>
                         </Text>

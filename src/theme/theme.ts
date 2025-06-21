@@ -1,6 +1,7 @@
 //@ts-nocheck
 
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { theme as baseTheme } from '@chakra-ui/theme'
 import "@fontsource/quicksand"; // Default weight (400)
 import "@fontsource/quicksand/600.css"; // Semi-bold (600)
 import "@fontsource/quicksand/700.css"; // Bold (700)
@@ -20,6 +21,12 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
     config,
+    layerStyles: {
+        base: {
+            bg: 'background.500',
+            color: 'text.500'
+        }
+    },
     fonts: {
         heading: "'Quicksand', sans-serif",  // Elegant serif for headings
         body: "'Quicksand', sans-serif", // Modern, rounded sans-serif for body text

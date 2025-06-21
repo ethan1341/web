@@ -62,7 +62,7 @@ const Resume = () => {
                         ]
                     },
                     {
-                        title: "Frontend Developer - Moblty, Livingston",
+                        title: "Fullstack Developer - Moblty, Livingston",
                         date: "June 2015 - June 2017",
                         tasks: [
                             "Developed single-page web applications (SPAs) for in-store displays, enhancing customer engagement and brand visibility.",

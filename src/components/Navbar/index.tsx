@@ -11,7 +11,7 @@ import {
     useBreakpointValue,
     useDisclosure, Link,
 } from '@chakra-ui/react'
-import { FaGithub, FaYoutube, FaLinkedin} from "react-icons/fa";
+import { FaGithub, FaYoutube, FaLinkedin, FaBlog } from "react-icons/fa";
 import {
     ChevronDownIcon,
     EmailIcon
@@ -20,6 +20,25 @@ import EPLogo from "../../assets/logo.tsx";
 
 export const Navbar = ()=> {
     const {isOpen} = useDisclosure()
+
+    // Updated function to make blog appear as a new screen but keep navbar visible
+    const scrollToBlog = () => {
+        const blogElement = document.getElementById('blog-section');
+        if (blogElement) {
+            // Hide main content except navbar
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.style.display = 'none';
+            }
+            
+            // Make sure blog is visible and scroll to top
+            blogElement.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Update document title
+            document.title = 'Ethan Pidcock - Blog';
+        }
+    };
 
     return (
         <Box>
@@ -51,6 +70,9 @@ export const Navbar = ()=> {
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
+                    <Link href="#" onClick={scrollToBlog}>
+                        <Icon as={FaBlog} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />
+                    </Link>
                     <Link href="https://github.com/ethan1341" isExternal>
                         <Icon as={FaGithub} boxSize={7} cursor="pointer" _hover={{ color: "highlight.100" }} />
                     </Link>

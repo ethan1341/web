@@ -62,7 +62,7 @@ export const Introtron = () => {
                         <Text fontSize={{ base: "3xl", md: "3xl" }} fontWeight="bold">
                             I am{" "}
                             <Text fontSize={{ base: "3xl", md: "3xl" }} style={{ color: "var(--chakra-colors-highlight-200)" }} display="inline">
-                                Frontend Developer
+                               Fullstack Engineer
                             </Text>
                         </Text>
                         <Text fontSize={{ base: "md", md: "xl" }} opacity="0.8">
@@ -99,7 +99,7 @@ export const Introtron = () => {
                     The Story:
                 </Text>
                 <Text fontSize={{ base: "lg", md: "xl" }} color="grey.charcoal" lineHeight="1.8">
-                    I'm a Frontend Developer specializing in React and modern tooling, with experience building high-performance UIs and working with large datasets. At Boeing, I optimized data management and visualization for complex datasets. At Comcast, I develop fast, efficient UIs for Xumo TV, ensuring a seamless experience for millions of users. Outside of work, I enjoy golfing and staying active.
+                    I'm a Fullstack Developer specializing in React and serverside typescript, with experience building high-performance UIs and working with large datasets. At Boeing, I optimized data management and visualization for complex datasets. At Comcast, I develop fast, efficient UIs for Xumo TV, ensuring a seamless experience for millions of users. Outside of work, I enjoy golfing and staying active.
                 </Text>
             </Box>
         </Box>
